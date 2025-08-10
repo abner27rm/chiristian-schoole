@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>International Christian School Guatemala</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { blue: "#0a4f8f", red: "#c62828", gold: "#f3b32c" }
+                    },
+                    fontFamily: { sans: ["Inter","system-ui","Segoe UI","Roboto","Helvetica","Arial"] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo.jpeg">
+</head>
+<body class="font-sans text-slate-800 bg-white">
+
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="h-14 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <img src="assets/logo.jpeg" class="h-14" alt="">
+                <span class="font-extrabold text-brand-blue">ICS</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 font-semibold">
+                <a href="#home" class="hover:text-brand-blue">Home</a>
+                <a href="#school" class="hover:text-brand-blue">Our School</a>
+                <a href="#levels" class="hover:text-brand-blue">Academic Offer</a>
+                <a href="#testimonials" class="hover:text-brand-blue">Testimonials</a>
+                <a href="#gallery" class="hover:text-brand-blue">Gallery</a>
+                <a href="#visit" class="hover:text-brand-blue">Visit</a>
+                <a href="#contact" class="hover:text-brand-blue">Contact</a>
+                <a href="#apply" class="px-3 py-1.5 rounded-md bg-brand-gold text-white hover:opacity-90">Apply</a>
+            </nav>
+            <button id="menuBtn" class="md:hidden p-2 rounded-md border hover:bg-slate-50" aria-label="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+            </button>
+        </div>
+        <div id="mobileNav" class="md:hidden hidden border-t pb-4">
+            <a href="#home" class="block py-3 font-semibold">Home</a>
+            <a href="#school" class="block py-3 font-semibold">Our School</a>
+            <a href="#levels" class="block py-3 font-semibold">Academic Offer</a>
+            <a href="#testimonials" class="block py-3 font-semibold">Testimonials</a>
+            <a href="#gallery" class="block py-3 font-semibold">Gallery</a>
+            <a href="#visit" class="block py-3 font-semibold">Visit</a>
+            <a href="#contact" class="hover:text-brand-blue">Contact</a>
+            <a href="#apply" class="block mt-2 text-center px-4 py-2 rounded-md bg-brand-gold text-white font-semibold">Apply</a>
+        </div>
+    </div>
+</header>
+
+<section id="home" class="relative">
+    <div class="absolute inset-0">
+        <img src="assets/hero.jpg" class="w-full h-full object-cover" alt="">
+        <div class="absolute inset-0 bg-brand-blue/75"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 py-24 md:py-36 text-white">
+        <div class="max-w-3xl">
+            <p class="uppercase tracking-widest text-brand-gold font-semibold">International Christian School Guatemala</p>
+            <h1 class="mt-3 text-4xl md:text-6xl font-extrabold leading-tight">Educating and developing the whole person for the glory of God</h1>
+            <p class="mt-4 text-white/90">Faith, character and academic excellence in a caring, bilingual environment.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a href="#apply" class="px-6 py-3 rounded-lg bg-brand-gold text-slate-900 font-semibold hover:opacity-95">Apply Now</a>
+<!--
+                <button id="openVideo" class="px-6 py-3 rounded-lg border border-white/40 font-semibold hover:bg-white/10">Watch Video</button>
+-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video modal -->
+<!--<div id="videoModal" class="fixed inset-0 hidden items-center justify-center bg-black/70 z-[60] p-4">
+    <div class="w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden">
+        <iframe id="ytFrame" class="w-full h-full" src="" title="ICS Video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+</div>-->
+
+<section id="school" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue">Our School</h2>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+                Students have daily opportunities to engage in worship, Bible study and prayer to further their love and trust of Christ.
+                We combine rigorous academics, bilingual education and a strong community to develop character and leadership.
+            </p>
+            <ul class="mt-4 list-disc pl-5 text-slate-700">
+                <li>Bilingual K–12 program</li>
+                <li>Christ-centered community</li>
+                <li>Sports, arts & service</li>
+            </ul>
+        </div>
+        <div>
+            <img src="assets/img1.jpg" class="rounded-2xl shadow-xl w-full object-cover" alt="">
+        </div>
+    </div>
+</section>
+
+<section id="levels" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue text-center">Academic Offer</h2>
+
+        <div id="preschool" class="mt-12 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">PRESCHOOL</h3>
+                <p class="mt-3 text-slate-700">We help young children prepare for kindergarten through play, interactive activities and games.</p>
+            </div>
+            <img src="assets/img2.jpg" class="rounded-xl shadow w-full object-cover" alt="">
+        </div>
+
+        <div id="elementary" class="mt-16 grid md:grid-cols-2 gap-10 items-center">
+            <img src="assets/img3.jpg" class="rounded-xl shadow w-full object-cover order-2 md:order-1" alt="">
+            <div class="order-1 md:order-2">
+                <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">ELEMENTARY</h3>
+                <p class="mt-3 text-slate-700">Environment where students learn to play, develop friendships and love learning.</p>
+            </div>
+        </div>
+
+        <div id="middle" class="mt-16 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">MIDDLE SCHOOL</h3>
+                <p class="mt-3 text-slate-700">Preparing students to be self‑advocates through academics, extracurriculars and relationships.</p>
+            </div>
+            <img src="assets/img4.jpg" class="rounded-xl shadow w-full object-cover" alt="">
+        </div>
+
+        <div id="high" class="mt-16 grid md:grid-cols-2 gap-10 items-center">
+            <img src="assets/img6.jpg" class="rounded-xl shadow w-full object-cover order-2 md:order-1" alt="">
+            <div class="order-1 md:order-2">
+                <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">HIGH SCHOOL</h3>
+                <p class="mt-3 text-slate-700">Critical thinking, higher‑order skills and a curriculum that prepares them for college and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue">Parents testimonials</h2>
+        <p class="mt-2 text-slate-600">We invite you to read what our families say about ICS.</p>
+        <div class="mt-8 grid lg:grid-cols-3 gap-6">
+            <figure class="rounded-2xl border p-6 shadow-sm">
+                <blockquote class="text-slate-700">“ICS is a safe place where our children grow in faith and excellence.”</blockquote>
+                <figcaption class="mt-4 text-sm font-semibold text-slate-600">— Andrea P.</figcaption>
+            </figure>
+            <figure class="rounded-2xl border p-6 shadow-sm">
+                <blockquote class="text-slate-700">“Teachers truly care and challenge students to do their best.”</blockquote>
+                <figcaption class="mt-4 text-sm font-semibold text-slate-600">— Carlos R.</figcaption>
+            </figure>
+            <figure class="rounded-2xl border p-6 shadow-sm">
+                <blockquote class="text-slate-700">“Great bilingual program and strong community.”</blockquote>
+                <figcaption class="mt-4 text-sm font-semibold text-slate-600">— Miriam S.</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue">Gallery</h2>
+        <p class="mt-2 text-slate-600">Life at ICS — kids playing, learning and growing.</p>
+
+        <div class="mt-8 columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
+            <img src="assets/img7.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img8.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img9.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img10.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+<!--
+            <img src="assets/img10.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+-->
+            <img src="assets/img12.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img13.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img14.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img15.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10 items-start">
+        <div class="md:col-span-1">
+            <img src="assets/logo.jpeg" class="w-full max-w-sm mx-auto" alt="ICS Emblem">
+        </div>
+        <div class="md:col-span-2">
+            <h3 class="text-2xl font-extrabold text-brand-blue">Making eternal impressions</h3>
+            <p class="mt-3 text-slate-700 leading-relaxed">
+                At International Christian School Guatemala, we nurture our students’ hearts through a community of love.
+                We sharpen their minds with wisdom and intellect, and develop their unique strengths through a
+                tradition of academic, spiritual, artistic and athletic excellence.
+            </p>
+            <p class="mt-4 text-slate-600 italic">“Love the Lord your God with all your heart and with all your soul and with all your mind and with all your strength.” — Mark 12:30</p>
+        </div>
+    </div>
+</section>
+
+<section id="visit" class="py-20 bg-brand-blue text-white">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold">Come and see our campus</h2>
+            <p class="mt-3 text-white/90">Schedule a tour and experience our classrooms, labs and sports areas.</p>
+        </div>
+        <div class="flex gap-3 md:justify-end">
+            <a href="#apply" class="px-6 py-3 rounded-lg bg-brand-gold text-slate-900 font-semibold hover:opacity-95">Start Application</a>
+            <a href="#contact" class="px-6 py-3 rounded-lg border border-white/40 font-semibold hover:bg-white/10">Inquire</a>
+        </div>
+    </div>
+</section>
+
+<section id="apply" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+        <div class="bg-white border rounded-2xl p-6 shadow-sm">
+            <h3 class="text-2xl font-extrabold text-brand-blue">Apply Today</h3>
+
+            <form id="applyForm" class="mt-6 grid grid-cols-1 gap-4">
+                <input id="parentName" class="border rounded-md px-4 py-2" type="text" placeholder="Parent/Guardian Name" required>
+                <input id="parentEmail" class="border rounded-md px-4 py-2" type="email" placeholder="Email" required>
+                <input id="parentPhone" class="border rounded-md px-4 py-2" type="tel" placeholder="Phone" required>
+                <select id="gradeInterest" class="border rounded-md px-4 py-2" required>
+                    <option selected disabled value="">Interest (Grade Level)</option>
+                    <option>Preschool</option>
+                    <option>Elementary</option>
+                    <option>Middle</option>
+                    <option>High</option>
+                </select>
+
+                <button id="applyBtn" type="submit" class="mt-2 bg-brand-blue text-white font-semibold rounded-md px-4 py-2 hover:opacity-95">
+                    Submit
+                </button>
+            </form>
+
+            <p class="text-xs text-slate-500 mt-2">When you send it, WhatsApp will open with the message prefilled.</p>
+        </div>
+
+        <div id="contact" class="bg-white border rounded-2xl p-6 shadow-sm">
+            <h3 class="text-2xl font-extrabold text-brand-blue">Contact</h3>
+            <ul class="mt-4 space-y-2 text-slate-700">
+                <li><strong>Address:</strong> Carr. a El Salvador Km. 16, Cdad. de Guatemala</li>
+                <li><strong>Phone:</strong> (502) 4179 3647</li>
+                <li><strong>Email:</strong> info@ICSuatemala.edu.gt</li>
+            </ul>
+            <div class="mt-6 h-56 w-full rounded-lg overflow-hidden">
+                <iframe class="w-full h-full" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.0733929022003!2d-90.44671018924767!3d14.537794478552456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589bb918fe00483%3A0x13cb0d49ee34f0fb!2sChristian%20American%20School%20of%20Guatemala!5e0!3m2!1ses-419!2sgt!4v1754776581027!5m2!1ses-419!2sgt" width="600" height="450" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-100">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-8">
+        <div>
+            <img src="assets/logo.jpeg" class="h-14 rounded-sm" alt="">
+            <p class="mt-3 text-sm text-slate-400">© <span id="y"></span> International Christian School Guatemala.</p>
+        </div>
+        <div>
+            <h4 class="font-semibold">Explore</h4>
+            <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li><a href="#school" class="hover:underline">Our School</a></li>
+                <li><a href="#levels" class="hover:underline">Academic Offer</a></li>
+                <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold">Admissions</h4>
+            <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li><a href="#" class="hover:underline">Requirements</a></li>
+                <li><a href="#" class="hover:underline">Tuition & Fees</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold">Follow</h4>
+            <div class="mt-3 flex gap-3">
+                <a href="#" class="p-2 rounded-md bg-white/10 hover:bg-white/20">Fb</a>
+                <a href="#" class="p-2 rounded-md bg-white/10 hover:bg-white/20">Ig</a>
+                <a href="#" class="p-2 rounded-md bg-white/10 hover:bg-white/20">Yt</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="lightbox" class="fixed inset-0 hidden items-center justify-center bg-black/80 z-[70] p-4">
+    <img id="lightboxImg" src="" class="max-h-full max-w-full rounded-lg shadow-2xl" alt="">
+</div>
+
+<script>
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+
+    const openVideo = document.getElementById('openVideo');
+    const videoModal = document.getElementById('videoModal');
+    const ytFrame = document.getElementById('ytFrame');
+    const YT_ID = "dfpYdUjeGT8";
+    openVideo?.addEventListener('click', () => {
+        ytFrame.src = `https://www.youtube.com/embed/${YT_ID}?autoplay=1&rel=0`;
+        videoModal.classList.remove('hidden'); videoModal.classList.add('flex');
+    });
+    videoModal?.addEventListener('click', (e) => {
+        if (e.target === videoModal) { ytFrame.src = ""; videoModal.classList.add('hidden'); videoModal.classList.remove('flex'); }
+    });
+
+    // lightbox para la galería
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    document.querySelectorAll('.gallery-item').forEach(img => {
+        img.addEventListener('click', () => {
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden'); lightbox.classList.add('flex');
+        });
+    });
+    lightbox.addEventListener('click', () => {
+        lightbox.classList.add('hidden'); lightbox.classList.remove('flex'); lightboxImg.src = "";
+    });
+
+    // WhatsApp form submission
+    const WHATSAPP_NUMBER = "50241793647";
+
+    const form = document.getElementById("applyForm");
+    const btn  = document.getElementById("applyBtn");
+
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+
+        const name  = document.getElementById("parentName").value.trim();
+        const email = document.getElementById("parentEmail").value.trim();
+        const phone = document.getElementById("parentPhone").value.trim();
+        const grade = document.getElementById("gradeInterest").value;
+
+        const message =
+            `Hello Admissions!
+            I would like to apply to ICS.
+
+            Parent/Guardian: ${name}
+            Email: ${email}
+            Phone: ${phone}
+            Interest (Grade): ${grade}
+
+            Please contact me. Thank you!`;
+
+        const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+        btn.disabled = true;
+        btn.textContent = "Opening WhatsApp…";
+
+        window.open(url, "_blank");
+
+        setTimeout(() => {
+            btn.disabled = false;
+            btn.textContent = "Submit";
+        }, 1200);
+    });
+
+</script>
+</body>
+</html>
