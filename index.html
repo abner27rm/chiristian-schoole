@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>International Christian School Guatemala</title>
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -60,7 +59,7 @@
 
 <section id="home" class="relative">
     <div class="absolute inset-0">
-        <img src="assets/hero.jpg" class="w-full h-full object-cover" alt="">
+        <img src="assets/hero2.jpeg" class="w-full h-full object-cover" alt="">
         <div class="absolute inset-0 bg-brand-blue/75"></div>
     </div>
     <div class="relative max-w-7xl mx-auto px-4 py-24 md:py-36 text-white">
@@ -94,13 +93,28 @@
                 We combine rigorous academics, bilingual education and a strong community to develop character and leadership.
             </p>
             <ul class="mt-4 list-disc pl-5 text-slate-700">
-                <li>Bilingual K–12 program</li>
+                <li>Bilingual Preschool, K-12 program</li>
                 <li>Christ-centered community</li>
                 <li>Sports, arts & service</li>
             </ul>
         </div>
-        <div>
-            <img src="assets/img1.jpg" class="rounded-2xl shadow-xl w-full object-cover" alt="">
+
+        <div class="relative overflow-hidden rounded-2xl shadow-xl">
+            <div id="carousel" class="flex transition-transform duration-700">
+                <img src="assets/vision.jpeg" class="w-full flex-shrink-0 object-cover" alt="Vision">
+                <img src="assets/mision.jpeg" class="w-full flex-shrink-0 object-cover" alt="Mission">
+                <img src="assets/values.jpeg" class="w-full flex-shrink-0 object-cover" alt="Values">
+                <img src="assets/instalations1.jpeg" class="w-full flex-shrink-0 object-cover" alt="Facilities 1">
+                <img src="assets/instalations2.jpeg" class="w-full flex-shrink-0 object-cover" alt="Facilities 1">
+
+            </div>
+
+            <button id="prevBtn" class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 hover:bg-white text-brand-blue p-2 rounded-full shadow">
+                ‹
+            </button>
+            <button id="nextBtn" class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 hover:bg-white text-brand-blue p-2 rounded-full shadow">
+                ›
+            </button>
         </div>
     </div>
 </section>
@@ -114,11 +128,11 @@
                 <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">PRESCHOOL</h3>
                 <p class="mt-3 text-slate-700">We help young children prepare for kindergarten through play, interactive activities and games.</p>
             </div>
-            <img src="assets/img2.jpg" class="rounded-xl shadow w-full object-cover" alt="">
+            <img src="assets/img2.png" class="rounded-xl shadow w-full object-cover" alt="">
         </div>
 
         <div id="elementary" class="mt-16 grid md:grid-cols-2 gap-10 items-center">
-            <img src="assets/img3.jpg" class="rounded-xl shadow w-full object-cover order-2 md:order-1" alt="">
+            <img src="assets/img4.png" class="rounded-xl shadow w-full object-cover order-2 md:order-1" alt="">
             <div class="order-1 md:order-2">
                 <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">ELEMENTARY</h3>
                 <p class="mt-3 text-slate-700">Environment where students learn to play, develop friendships and love learning.</p>
@@ -130,11 +144,11 @@
                 <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">MIDDLE SCHOOL</h3>
                 <p class="mt-3 text-slate-700">Preparing students to be self‑advocates through academics, extracurriculars and relationships.</p>
             </div>
-            <img src="assets/img4.jpg" class="rounded-xl shadow w-full object-cover" alt="">
+            <img src="assets/img3.png" class="rounded-xl shadow w-full object-cover" alt="">
         </div>
 
         <div id="high" class="mt-16 grid md:grid-cols-2 gap-10 items-center">
-            <img src="assets/img6.jpg" class="rounded-xl shadow w-full object-cover order-2 md:order-1" alt="">
+            <img src="assets/img6.png" class="rounded-xl shadow w-full object-cover order-2 md:order-1" alt="">
             <div class="order-1 md:order-2">
                 <h3 class="text-2xl font-extrabold text-brand-red underline underline-offset-4">HIGH SCHOOL</h3>
                 <p class="mt-3 text-slate-700">Critical thinking, higher‑order skills and a curriculum that prepares them for college and beyond.</p>
@@ -170,17 +184,16 @@
         <p class="mt-2 text-slate-600">Life at ICS — kids playing, learning and growing.</p>
 
         <div class="mt-8 columns-1 sm:columns-2 lg:columns-3 gap-4 [column-fill:_balance]">
-            <img src="assets/img7.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
-            <img src="assets/img8.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
-            <img src="assets/img9.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
-            <img src="assets/img10.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
-<!--
-            <img src="assets/img10.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
--->
-            <img src="assets/img12.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
-            <img src="assets/img13.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
-            <img src="assets/img14.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
-            <img src="assets/img15.jpg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img1.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img7.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img8.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img9.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img10.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img11.jpeg" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img12.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img13.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img14.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
+            <img src="assets/img15.png" class="mb-4 w-full rounded-xl shadow cursor-pointer gallery-item" alt="">
         </div>
     </div>
 </section>
@@ -245,7 +258,7 @@
             <ul class="mt-4 space-y-2 text-slate-700">
                 <li><strong>Address:</strong> Carr. a El Salvador Km. 16, Cdad. de Guatemala</li>
                 <li><strong>Phone:</strong> (502) 4179 3647</li>
-                <li><strong>Email:</strong> info@ICSuatemala.edu.gt</li>
+                <li><strong>Email:</strong> infocarretera@csguatemala.edu.gt</li>
             </ul>
             <div class="mt-6 h-56 w-full rounded-lg overflow-hidden">
                 <iframe class="w-full h-full" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.0733929022003!2d-90.44671018924767!3d14.537794478552456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589bb918fe00483%3A0x13cb0d49ee34f0fb!2sChristian%20American%20School%20of%20Guatemala!5e0!3m2!1ses-419!2sgt!4v1754776581027!5m2!1ses-419!2sgt" width="600" height="450" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -362,6 +375,30 @@
         }, 1200);
     });
 
+    // Carousel functionality
+    const carousel = document.getElementById("carousel");
+    const slides = carousel.children.length;
+    let index = 0;
+
+    function showSlide(i) {
+        carousel.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+        index = (index + 1) % slides;
+        showSlide(index);
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+        index = (index - 1 + slides) % slides;
+        showSlide(index);
+    });
+
+    // Auto-slide cada 5s
+    setInterval(() => {
+        index = (index + 1) % slides;
+        showSlide(index);
+    }, 5000);
 </script>
 </body>
 </html>
