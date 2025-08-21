@@ -119,6 +119,40 @@
     </div>
 </section>
 
+<section id="campus2026" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+        <div>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue">New Campus 2026</h2>
+            <p class="mt-4 text-slate-700 leading-relaxed">
+                Our new campus will be inaugurated in 2026.
+            </p>
+            <ul class="mt-4 list-disc pl-5 text-slate-700">
+                <li>Modern classrooms and labs</li>
+                <li>Sports fields & multipurpose areas</li>
+                <li>Green spaces and student commons</li>
+            </ul>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl shadow-xl">
+            <div id="carousel2026" class="flex transition-transform duration-700">
+                <img src="assets/campus2026_1.jpeg" class="w-full flex-shrink-0 object-cover" alt="New Campus render 1">
+                <img src="assets/campus2026_2.jpeg" class="w-full flex-shrink-0 object-cover" alt="New Campus render 2">
+                <img src="assets/campus2026_3.jpeg" class="w-full flex-shrink-0 object-cover" alt="New Campus render 3">
+            </div>
+
+            <button id="prev2026" class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 hover:bg-white text-brand-blue p-2 rounded-full shadow" aria-label="Previous slide">
+                ‹
+            </button>
+            <button id="next2026" class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 hover:bg-white text-brand-blue p-2 rounded-full shadow" aria-label="Next slide">
+                ›
+            </button>
+
+            <div id="dots2026" class="absolute bottom-3 left-0 right-0 flex justify-center gap-2"></div>
+        </div>
+    </div>
+</section>
+
+
 <section id="levels" class="py-20 bg-slate-50">
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-3xl md:text-4xl font-extrabold text-brand-blue text-center">Academic Offer</h2>
@@ -399,6 +433,63 @@
         index = (index + 1) % slides;
         showSlide(index);
     }, 5000);
+
+
+    // Utilidad genérica para inicializar carruseles por ID
+    function initCarousel({ trackId, prevId, nextId, dotsId, intervalMs = 5000 }) {
+        const track = document.getElementById(trackId);
+        if (!track) return;
+        const slidesCount = track.children.length;
+        let i = 0, timer;
+
+
+        const dotsWrap = dotsId ? document.getElementById(dotsId) : null;
+        let dots = [];
+        if (dotsWrap) {
+            dotsWrap.innerHTML = "";
+            for (let k = 0; k < slidesCount; k++) {
+                const b = document.createElement("button");
+                b.className = "h-2 w-2 rounded-full bg-white/70 hover:bg-white ring-1 ring-white/50";
+                b.setAttribute("aria-label", `Go to slide ${k+1}`);
+                b.addEventListener("click", () => { i = k; update(); restart(); });
+                dotsWrap.appendChild(b);
+                dots.push(b);
+            }
+        }
+
+        function update() {
+            track.style.transform = `translateX(-${i * 100}%)`;
+            if (dots.length) {
+                dots.forEach((d, idx) => {
+                    d.className = "h-2 w-2 rounded-full ring-1 ring-white/50 " + (idx === i ? "bg-white" : "bg-white/60");
+                });
+            }
+        }
+
+        function next() { i = (i + 1) % slidesCount; update(); }
+        function prev() { i = (i - 1 + slidesCount) % slidesCount; update(); }
+
+        function start() { timer = setInterval(next, intervalMs); }
+        function stop() { clearInterval(timer); }
+        function restart() { stop(); start(); }
+
+        document.getElementById(nextId)?.addEventListener("click", () => { next(); restart(); });
+        document.getElementById(prevId)?.addEventListener("click", () => { prev(); restart(); });
+
+        track.parentElement.addEventListener("mouseenter", stop);
+        track.parentElement.addEventListener("mouseleave", start);
+
+        update(); start();
+    }
+
+    initCarousel({
+        trackId: "carousel2026",
+        prevId: "prev2026",
+        nextId: "next2026",
+        dotsId: "dots2026",
+        intervalMs: 5000
+    });
+
 </script>
 </body>
 </html>
